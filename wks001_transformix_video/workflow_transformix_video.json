@@ -1,0 +1,967 @@
+{
+  "last_node_id": 203,
+  "last_link_id": 672,
+  "nodes": [
+    {
+      "id": 39,
+      "type": "Save Image With Prompt Data",
+      "pos": [
+        1500,
+        60
+      ],
+      "size": {
+        "0": 510,
+        "1": 770
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 519
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 80,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "name": "positive_prompt",
+          "type": "STRING",
+          "link": 95,
+          "widget": {
+            "name": "positive_prompt"
+          }
+        },
+        {
+          "name": "negative_prompt",
+          "type": "STRING",
+          "link": 81,
+          "widget": {
+            "name": "negative_prompt"
+          }
+        },
+        {
+          "name": "parameters",
+          "type": "STRING",
+          "link": 318,
+          "widget": {
+            "name": "parameters"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Save Image With Prompt Data"
+      },
+      "widgets_values": [
+        "Positive Prompt",
+        "Negative Prompt",
+        "",
+        ""
+      ],
+      "color": "#1a5757",
+      "bgcolor": "#2e6b6b"
+    },
+    {
+      "id": 165,
+      "type": "Wildcard Processor",
+      "pos": [
+        370,
+        340
+      ],
+      "size": {
+        "0": 440,
+        "1": 94
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 484,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            659
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Wildcard Processor"
+      },
+      "widgets_values": [
+        "__prompt_template__",
+        258351881868301,
+        "fixed"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2020,
+        60
+      ],
+      "size": {
+        "0": 230,
+        "1": 620
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 239,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            106
+          ],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "A tall, slender figure made entirely of swirling clouds of ether. The figure is translucent and shimmering, with no discernible features or limbs. It floats effortlessly through the air, leaving a trail of glowing energy behind it. Its movements are fluid and graceful, as if it were dancing on the wind. Despite its ethereal appearance, there is an undeniable sense of power emanating from this being - as though it could manipulate reality itself with a mere thought."
+        ],
+        "A tall, slender figure made entirely of swirling clouds of ether. The figure is translucent and shimmering, with no discernible features or limbs. It floats effortlessly through the air, leaving a trail of glowing energy behind it. Its movements are fluid and graceful, as if it were dancing on the wind. Despite its ethereal appearance, there is an undeniable sense of power emanating from this being - as though it could manipulate reality itself with a mere thought.",
+        "A tall, slender figure made entirely of swirling clouds of ether. The figure is translucent and shimmering, with no discernible features or limbs. It floats effortlessly through the air, leaving a trail of glowing energy behind it. Its movements are fluid and graceful, as if it were dancing on the wind. Despite its ethereal appearance, there is an undeniable sense of power emanating from this being - as though it could manipulate reality itself with a mere thought.",
+        "A tall figure made entirely of swirling white clouds of ether. The figure is translucent and shimmering, with no discernible features or limbs. It floats effortlessly through the air, leaving a trail of glowing energy behind it. Its movements are fluid and graceful, as if it were dancing on the wind. Despite its ethereal appearance, there is an undeniable sense of power emanating from this being - as though it could manipulate reality itself with a mere thought."
+      ]
+    },
+    {
+      "id": 40,
+      "type": "FileNamePrefix",
+      "pos": [
+        820,
+        -110
+      ],
+      "size": {
+        "0": 330,
+        "1": 130
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "custom_text",
+          "type": "STRING",
+          "link": 96,
+          "widget": {
+            "name": "custom_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "links": [
+            80
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FileNamePrefix"
+      },
+      "widgets_values": [
+        "true",
+        "true",
+        "pw09",
+        ""
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1500,
+        -30
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 639
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 376,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            519
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#2e571a",
+      "bgcolor": "#426b2e"
+    },
+    {
+      "id": 189,
+      "type": "CheckpointHash",
+      "pos": [
+        40,
+        250
+      ],
+      "size": {
+        "0": 310,
+        "1": 34
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "STRING",
+          "link": 598,
+          "widget": {
+            "name": "ckpt_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ckpt_hash",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointHash"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 44,
+      "type": "Wildcard Processor",
+      "pos": [
+        370,
+        60
+      ],
+      "size": {
+        "0": 440,
+        "1": 230
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            484
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "Node name for S&R": "Wildcard Processor"
+      },
+      "widgets_values": [
+        "A tall figure made entirely of swirling white clouds of ether. The figure is translucent and shimmering, with no discernible features or limbs. It floats effortlessly through the air, leaving a trail of glowing energy behind it. Its movements are fluid and graceful, as if it were dancing on the wind. Despite its ethereal appearance, there is an undeniable sense of power emanating from this being - as though it could manipulate reality itself with a mere thought.",
+        495496215429336,
+        "fixed"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 133,
+      "type": "Checkpoint Loader Simple Mikey",
+      "pos": [
+        40,
+        70
+      ],
+      "size": {
+        "0": 310,
+        "1": 140
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            631
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            592,
+            593
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            376
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "ckpt_name",
+          "type": "STRING",
+          "links": [
+            598
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "ckpt_hash",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Checkpoint Loader Simple Mikey"
+      },
+      "widgets_values": [
+        "PixelWave09.safetensors"
+      ]
+    },
+    {
+      "id": 203,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        820,
+        60
+      ],
+      "size": {
+        "0": 330,
+        "1": 730
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 671
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 669
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 670
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 665
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            668
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        656310815252691,
+        "randomize",
+        20,
+        3,
+        "dpmpp_sde_gpu",
+        "karras",
+        0,
+        9,
+        "enable"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "TextCombinations",
+      "pos": [
+        1160,
+        -240
+      ],
+      "size": {
+        "0": 330,
+        "1": 260
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "type": "STRING",
+          "link": 106,
+          "widget": {
+            "name": "text1"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output1",
+          "type": "STRING",
+          "links": [
+            318
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "output2",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextCombinations"
+      },
+      "widgets_values": [
+        "Text 1",
+        "\nNegative prompt: %Prompt With Style V3.negative_prompt%\nSteps: %KSampler.steps%, Sampler: %KSampler.sampler_name%, CFG scale: %KSampler.cfg%, Seed: %KSampler.noise_seed%, Size: 832x1216, Model hash: %CheckpointHash.output_ckpt_hash%, Model: %Checkpoint Loader Simple Mikey.ckpt_name%",
+        "text1 + text2 to output1, text1 to output2",
+        " ",
+        "false",
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 201,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1160,
+        60
+      ],
+      "size": {
+        "0": 330,
+        "1": 730
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 672
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 641
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 642
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 668
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            639
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        811673478923119,
+        "randomize",
+        22,
+        4,
+        "dpmpp_sde_gpu",
+        "normal",
+        11,
+        10000,
+        "disable"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "Prompt With Style V3",
+      "pos": [
+        370,
+        470
+      ],
+      "size": {
+        "0": 440,
+        "1": 432
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base_model",
+          "type": "MODEL",
+          "link": 656,
+          "slot_index": 0
+        },
+        {
+          "name": "clip_base",
+          "type": "CLIP",
+          "link": 592
+        },
+        {
+          "name": "clip_refiner",
+          "type": "CLIP",
+          "link": 593
+        },
+        {
+          "name": "positive_prompt",
+          "type": "STRING",
+          "link": 659,
+          "widget": {
+            "name": "positive_prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base_model",
+          "type": "MODEL",
+          "links": [
+            671,
+            672
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [
+            665
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "base_pos_cond",
+          "type": "CONDITIONING",
+          "links": [
+            641,
+            669
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "base_neg_cond",
+          "type": "CONDITIONING",
+          "links": [
+            642,
+            670
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "refiner_pos_cond",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "refiner_neg_cond",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "positive_prompt",
+          "type": "STRING",
+          "links": [
+            95,
+            96,
+            239
+          ],
+          "shape": 3,
+          "slot_index": 6
+        },
+        {
+          "name": "negative_prompt",
+          "type": "STRING",
+          "links": [
+            81
+          ],
+          "shape": 3,
+          "slot_index": 7
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Prompt With Style V3"
+      },
+      "widgets_values": [
+        "",
+        "clones, split image, poorly drawn hands, high contrast",
+        "2:3 [832x1216 portrait]",
+        "false",
+        "false",
+        1024,
+        1536,
+        1,
+        101319108890909,
+        "fixed",
+        "2x"
+      ],
+      "color": "#1a4357",
+      "bgcolor": "#2e576b"
+    },
+    {
+      "id": 195,
+      "type": "PerturbedAttentionGuidance",
+      "pos": [
+        40,
+        320
+      ],
+      "size": {
+        "0": 310,
+        "1": 60
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 631
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            656
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PerturbedAttentionGuidance"
+      },
+      "widgets_values": [
+        1.5
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      80,
+      40,
+      0,
+      39,
+      1,
+      "STRING"
+    ],
+    [
+      81,
+      37,
+      7,
+      39,
+      3,
+      "STRING"
+    ],
+    [
+      95,
+      37,
+      6,
+      39,
+      2,
+      "STRING"
+    ],
+    [
+      96,
+      37,
+      6,
+      40,
+      0,
+      "STRING"
+    ],
+    [
+      106,
+      43,
+      0,
+      50,
+      0,
+      "STRING"
+    ],
+    [
+      239,
+      37,
+      6,
+      43,
+      0,
+      "STRING"
+    ],
+    [
+      318,
+      50,
+      0,
+      39,
+      4,
+      "STRING"
+    ],
+    [
+      376,
+      133,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      484,
+      44,
+      0,
+      165,
+      0,
+      "STRING"
+    ],
+    [
+      519,
+      8,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      592,
+      133,
+      1,
+      37,
+      1,
+      "CLIP"
+    ],
+    [
+      593,
+      133,
+      1,
+      37,
+      2,
+      "CLIP"
+    ],
+    [
+      598,
+      133,
+      3,
+      189,
+      0,
+      "STRING"
+    ],
+    [
+      631,
+      133,
+      0,
+      195,
+      0,
+      "MODEL"
+    ],
+    [
+      639,
+      201,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      641,
+      37,
+      2,
+      201,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      642,
+      37,
+      3,
+      201,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      656,
+      195,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      659,
+      165,
+      0,
+      37,
+      3,
+      "STRING"
+    ],
+    [
+      665,
+      37,
+      1,
+      203,
+      3,
+      "LATENT"
+    ],
+    [
+      668,
+      203,
+      0,
+      201,
+      3,
+      "LATENT"
+    ],
+    [
+      669,
+      37,
+      2,
+      203,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      670,
+      37,
+      3,
+      203,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      671,
+      37,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      672,
+      37,
+      0,
+      201,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
